@@ -2,6 +2,10 @@ import React, { Component } from "react";
 
 class List extends Component {
   render() {
+
+    const showOnClick = () => {
+
+    }
     return (
       <div
         className="card card-body mb-3"
@@ -17,7 +21,7 @@ class List extends Component {
             <i
               className="fas fa-sort-down"
               style={{ cursor: "pointer", float: "right" }}
-              onClick={}
+              onClick={this.showOnClick.bind(this)}
             />
           </li>
         </ul>
