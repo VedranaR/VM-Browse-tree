@@ -21,7 +21,7 @@ class List extends Component {
             <i
               className="fas fa-sort-down"
               style={{ cursor: "pointer", float: "right" }}
-              onClick={this.showOnClick.bind(this)}
+              onClick={this.showOnClick}
             />
           </li>
         </ul>
