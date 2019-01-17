@@ -15,7 +15,7 @@ class List extends Component {
           <li className="list-group-item">
             : {}
             <i
-              className="fas fa-user-edit"
+              className="fas fa-sort-down"
               style={{ cursor: "pointer", float: "right" }}
               onClick={}
             />
