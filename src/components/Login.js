@@ -4,6 +4,7 @@ class Login extends Component {
   render() {
     return (
       <div className="mx-auto">
+        <p className="mx-auto mb-3">Sign in</p>
         <input
           type="text"
           ref="username"
