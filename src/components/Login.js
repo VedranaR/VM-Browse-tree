@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 class Login extends Component {
   render() {
+    // handleClick = () => {
+
+    // }
     return (
       <div className="mx-auto">
         <p className="mx-auto mb-3">Sign in</p>
@@ -18,7 +21,7 @@ class Login extends Component {
           placeholder="Password"
         />
         <button
-          //onClick={event => this.handleClick(event)}
+          //onClick={this.handleClick()}
           className="btn btn-primary"
         >
           Login
