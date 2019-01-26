@@ -3,17 +3,17 @@ import React, { Component } from "react";
 class Login extends Component {
   render() {
     return (
-      <div>
+      <div className="mx-auto">
         <input
           type="text"
           ref="username"
-          className="form-control m-3"
+          className="form-control mx-auto mb-3"
           placeholder="Username"
         />
         <input
           type="password"
           ref="password"
-          className="form-control m-3"
+          className="form-control mx-auto mb-3"
           placeholder="Password"
         />
         <button
