@@ -1,22 +1,11 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
-  constructor() {
-    super();
-    this.state = {
-      token: ""
-    };
+  constructor(props) {
+    super(props);
   }
-  handleClick = () => {
-    axios
-      .post("https://www.vumedi.com/api/token-auth/", {
-        username: "frontend@vumedi.com",
-        password: "Frontend123"
-      })
-      //.then(response => response.json())
-      .then(data => this.setState({ token: data.data.token }));
-  };
+
   render() {
     return (
       <div className="mx-auto">
@@ -33,9 +22,11 @@ class Login extends Component {
           className="form-control mx-auto mb-3"
           placeholder="Password"
         />
-        <button onClick={this.handleClick} className="btn btn-primary">
-          Login
-        </button>
+        <Link to="/list">
+          <button onClick={this.props.handleClick} className="btn btn-primary">
+            Login
+          </button>
+        </Link>
       </div>
     );
   }

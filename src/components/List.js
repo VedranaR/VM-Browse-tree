@@ -1,16 +1,25 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class List extends Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  componentDidMount() {
+    console.log(this.props.token);
+    axios
+      .get("https://www.vumedi.com/api/browse/", {
+        headers: { Authorization: `Token {{${this.props.token}}}` }
+      })
+      .then(data => console.log(data));
+  }
+
   render() {
-
-    const showOnClick = () => {
-
-    }
     return (
       <div
         className="card card-body mb-3"
-        onClick={}
-        style={}
+        //onClick={}
+        //style={}
       >
         <h4>{}</h4>
         <ul className="list-group">
