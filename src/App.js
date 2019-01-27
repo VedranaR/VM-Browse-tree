@@ -32,13 +32,22 @@ class App extends Component {
         // username: "frontend@vumedi.com",
         // password: "Frontend123"
       })
-      .then(data => this.setState({ token: data.data.token }));
+      .then(data => this.setState({ token: data.token }));
+
+    console.log(this.state.token);
 
     this.setState({ viewLogin: !this.state.viewLogin });
+
+    const AuthStr = `Token {{${this.state.token}}`;
+    axios
+      .get("https://www.vumedi.com/api/browse/", {
+        headers: { Authorization: AuthStr }
+      })
+      .then(data => console.log(data));
   };
 
   render() {
-    const { token } = this.state;
+    //const { token } = this.state;
     const { viewLogin } = this.state;
 
     return (

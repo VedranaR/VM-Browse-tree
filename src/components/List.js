@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class List extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
-    console.log(this.props.token);
     axios
       .get("https://www.vumedi.com/api/browse/", {
         headers: { Authorization: `Token {{${this.props.token}}}` }
